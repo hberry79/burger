@@ -2,5 +2,11 @@
 var orm = require("../config/orm.js");
 
 var burger ={
+	all: function(cb){
+		orm.selectAll("burgers", function(res){
+			cb(res);
+		});
+	}
+}//end of burger object
 
-}//end of burget object
+module.exports = burger;
