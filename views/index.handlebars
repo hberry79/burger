@@ -1,27 +1,34 @@
 <div class="container">
 	<div class="row">
 		<div class= "col-m-12 text-center">
-			<img src="../../assets/burger.png" alt="burger">
+			<img src="/burger.png" alt="burger">
 			<h1>EatDaBurger!</h1>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-m-12">
-			burger data to populate here from handlebars
-			{{#each allBurgers}}
+		<div class="col-md-6 devoured">
+		<!--devoured burgers-->
 			<ol>
-				<li>{{this.id}}</li>
-				<li>{{this.burnerName}}</li>
-				<li>{{this.devoured}}</li>
+			{{#each burger}}
+				{{#if this.devoured}}
+				<li class="{{this.id}}">{{this.burger_name}}</li>	
 			</ol>
+		</div>
+		<div class ="col-md-6 nondevoured">
+		<!--non devoured burgers-->
+			<ol>
+			{{else}}
+				<li>{{this.burger_name}} <button type="submit" class="{{this.id}}">Eat me!</button> </li>
+			{{/if}}
 			{{/each}}
+			</ol>
 		</div>
 	</div>
 	<div class="row">
-		<div class= "col-m-12 text-center">
+		<div class= "col-md-6 text-center">
 			<form action="/burgers/new" method="POST">
 				<div class="form-group">
-					<input type="text" class="form-control" id="newBurger">
+				<textarea class="form-control" rows="5" id="newBurger"></textarea>
 				</div>
 				<button type="submit" class="btn btn-default">Submit</button>
 			</form>
