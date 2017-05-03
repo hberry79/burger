@@ -1,13 +1,20 @@
 <div class="container">
 	<div class="row">
 		<div class= "col-m-12 text-center">
-			<img src="/assets/burger.png" alt="burger"/>
+			<img src="../../assets/burger.png" alt="burger">
 			<h1>EatDaBurger!</h1>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-m-12">
 			burger data to populate here from handlebars
+			{{#each allBurgers}}
+			<ol>
+				<li>{{this.id}}</li>
+				<li>{{this.burnerName}}</li>
+				<li>{{this.devoured}}</li>
+			</ol>
+			{{/each}}
 		</div>
 	</div>
 	<div class="row">
