@@ -28,14 +28,14 @@ var orm = {
             });
         },
         updateOne: function(tableName, column, val1, column2, val2, cb) {
-        	var queryString = "UPDATE" + tableName + "SET" + column + '=' + val1 + "WHERE" + column2 + "=" + val2 + ';'
+        	var queryString = "UPDATE " + tableName + " SET " + column + '=' + val1 + " WHERE " + column2 + "=" + val2 + ';'
 
         	console.log(queryString)
         	/*UPDATE `burgers` SET `devoured`='1' WHERE `id`='2';*/
-        	//connection.query(queryString, function(err, res){
-        	//	if (err) throw err;
-        	//	cb(res);
-        	//});
+        	connection.query(queryString, function(err, res){
+        	if (err) throw err;
+        		cb(res);
+        	});
         }
     } //end of orm object
 

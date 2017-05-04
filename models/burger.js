@@ -14,7 +14,7 @@ cb(res);
 });
 	},
 	update: function(id, cb){
-		orm.updateOne('burgers','devoured','1', 'id', '2',function(res){
+		orm.updateOne('burgers','devoured','1', 'id', id,function(res){
 			cb(res);
 		});
 	}
