@@ -1,5 +1,14 @@
+
+
+/*#e5c3c6	(229,195,198) pink
+#e1e9b7	(225,233,183) green
+#f96161	(249,97,97) red
+#bcd2d0	(188,210,208)blue
+#d0b783	(208,183,131) tan*/
+
 body {
 	background-color: #bcd2d0;
+	align-content: center;
 }
 
 .devoured, .nondevoured {
@@ -7,3 +16,8 @@ body {
 	border-radius: 3px;
 	border: solid grey 1px;
 }
+
+img {
+	max-width: 300px;
+}
+
