@@ -9,7 +9,12 @@ var burger = {
 	},
 
 	add: function(val, cb){
-		orm.insertOne("burgers", "burger_name", "devoured",val, '0', function(res){
+orm.insertOne("burgers", ["burger_name", "devoured"], [val, '0'], function(res){
+cb(res);
+});
+	},
+	update: function(id, cb){
+		orm.updateOne('burgers','devoured','1', 'id', '2',function(res){
 			cb(res);
 		});
 	}
