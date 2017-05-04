@@ -8,8 +8,8 @@ var burger = {
 		});
 	},
 
-	add: function(cb){
-		orm.insertOne("burgers", "burger_name", "devoured",GET BURNER NAME, 0, function(res){
+	add: function(val, cb){
+		orm.insertOne("burgers", "burger_name", "devoured",val, '0', function(res){
 			cb(res);
 		});
 	}
