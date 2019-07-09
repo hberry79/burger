@@ -33,3 +33,16 @@ li{
 #newBurger{
 	margin-top: 20px;
 }
+
+.override__quovo-connect {
+    background-color: #F6F7F8;
+}
+
+.override__button--dark {
+    color: red;
+    background-color: black;
+}
+
+.override__anchor {
+    color: pink;
+}
